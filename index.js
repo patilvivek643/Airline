@@ -13,11 +13,16 @@ app.get('/',(req,res)=>{
         data: {}
     });
 });
-app.listen(3000,async()=>{
+app.listen(3000,async () => {
     //this callback will be executed everytime this server starts
-    console.log("Server Started Successfully");
+    // console.log("Server Started Successfully");
     await connect();
     console.log("Mongo db connected successfully");
     console.log("Server Started Successfully");
-  
+    // let user = await User.create({
+    //     email:"abc@xyz.com",
+    //     password:12345,
+    //     username:"ABC"
+    // });
+    // console.log(user);
 });
