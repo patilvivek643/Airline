@@ -9,12 +9,8 @@ const userSchema = new mongoose.Schema({
     password : {
         type : String,
         required: true
-    },
-    username:{
-        type : String,
-        required : true
     }
-},{timestamps: true});
+   },{timestamps: true});
 // pre - save - is a trigger that gets a function and executes it before a user object is saved
 userSchema.pre('save',async function encrptPassword (next){
     const user = this;
